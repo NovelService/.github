@@ -14,6 +14,9 @@ That download url is then getting polled by the user and then the user can downl
 
 <img src="./images/architecture.svg">
 
+I'm primarily a Java/Kotlin developer so both Lambdas are written in Kotlin.
+NovelWorkerNode is written in NodeJs, because I am using [percollate](https://github.com/danburzo/percollate) to do the actual conversion of the website to ebook, which in turn needs puppeteer. So instead of having an docker image with both JVM and NodeJS installed, it is directly written in NodeJS.
+
 ## Constraints
 - NovelWorkerNode is deployed inside an EC2 instance with docker compose.
 Although the deployment is automated with webhook it still is janky at best.
